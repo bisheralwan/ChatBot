@@ -74,25 +74,25 @@ public class ChatBot extends JFrame implements ActionListener
             int num=random.nextInt(3);
             if(num==0)
             {
-            bot("I'm fine !,What about you ? ");
+            bot("I'm fine, what about you ? ");
             }
             else if(num==1)
             {
-                bot("I am good , thanks for asking !");
+                bot("I am good, thanks for asking !");
             }
             else 
             {
-                bot("I am great ,thanks for asking !");
+                bot("I am great, thanks for asking !");
             }
         
         }
         else if(message.contains("you")&&(message.contains("smart")||message.contains("good")))
         {
-            bot("Thank you !");
+            bot("Thank you!");
         }
         else if(message.contains("welcome"))
         {
-            bot("You are so polite.How can i help you ?");
+            bot("How can i help you?");
         }
         
         else if(message.contains("hi")&&message.charAt(0)=='h'||message.contains("hello")||message.contains("hey"))
@@ -101,7 +101,7 @@ public class ChatBot extends JFrame implements ActionListener
             int num=random.nextInt(3);
             if(num==0)
             {
-            bot("Hii");
+            bot("Hi");
             }
             else if(num==1)
             {
@@ -109,16 +109,16 @@ public class ChatBot extends JFrame implements ActionListener
             }
             else if(num==2)
             {
-                bot("Heyy");
+                bot("Hey");
             }
             else if(num==3)
             {
-                bot("hello buddy");
+                bot("Hello, buddy");
             }
         }
-        else if(message.contains("by"))
+        else if(message.contains("bye"))
         {
-            bot("Byy,See you soon ..!");
+            bot("Bye!");
         }
         else if(message.contains("i am good")||message.contains("i am great")||message.contains("i am ")&&message.contains("fine"))
         {
@@ -153,12 +153,12 @@ public class ChatBot extends JFrame implements ActionListener
             }
             if(message.contains("my"))
             {
-                bot("Your name is Ajaysinh");
+                bot("You're you!");
             }
         }
         else if(message.contains("change"))
         {
-            bot("Sorry,I can't change anything...");
+            bot("Sorry, I can't change anything...");
         }
         else if( message.contains("time"))
         {
@@ -192,31 +192,31 @@ public class ChatBot extends JFrame implements ActionListener
         else if(message.contains("good morning"))
         {
             
-                bot("Good morning,Have a nice day !");
+                bot("Good morning, have a nice day !");
         
         }
         else if(message.contains("good night"))
         {
             
-            bot("Good night,Have a nice dreams !");
+            bot("Good night!");
         
         }
         else if(message.contains("good evening"))
         {
             
-            bot("Good Evening ...!");
+            bot("Good Evening!");
         
         }
         else if(message.contains("good") && message.contains("noon"))
         {
             
-            bot("Good Afternoon ...!");
+            bot("Good Afternoon!");
         
         }
         
         else if(message.contains("clear")&&(message.contains("screen")||message.contains("chat")))
         {
-            bot("wait a few second...");
+            bot("wait a few seconds...");
             area.setText("");
         }
         else
@@ -228,13 +228,13 @@ public class ChatBot extends JFrame implements ActionListener
                     URL url=new URL("https://google.co.in");
                     URLConnection connection=url.openConnection();
                     connection.connect();
-                    bot("Here some results for you ...");
+                    bot("Here are some results for you ...");
                     java.awt.Desktop.getDesktop().browse(java.net.URI.create("http://www.google.com/search?hl=en&q="+message.replace(" ", "+")+"&btnG=Google+Search"));
             
                 }
                 catch(Exception ee)
                 {
-                    bot("Connect with internet connection for get better results...");
+                    bot("Looks like the internet is running slow!");
                 }
                 
             }
@@ -244,15 +244,15 @@ public class ChatBot extends JFrame implements ActionListener
                 if(num==0)
                 {    
                     
-                bot("Sorry ,I can't understand you !");
+                bot("Sorry ,I can't understand you!");
                 }
                 else if(num==1)
                 {
-                    bot("Sorry,I don't understand ");
+                    bot("Sorry, I don't understand.");
                 }
                 else if(num==2)
                 {
-                    bot("My apologies...I don't understand ");
+                    bot("My apologies, I don't understand ");
                 }
             }
         }
@@ -270,4 +270,6 @@ public class ChatBot extends JFrame implements ActionListener
         cb.setLocation(50,50);
         
     }
+    
+
 }
